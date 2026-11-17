@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 
 
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float MovementSpeed;
     private Vector3 Movement;
+    [SerializeField] float RotateSpeed;
 
 
 
@@ -34,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 MoveDir = new Vector3(Movement.x * -MovementSpeed, rb.linearVelocity.y, Movement.z * -MovementSpeed);
         if(Movement != Vector3.zero)
         {
-            transform.forward = MoveDir;
+            transform.forward = Vector3.Lerp(transform.forward, MoveDir.normalized, RotateSpeed);
         }
 
 

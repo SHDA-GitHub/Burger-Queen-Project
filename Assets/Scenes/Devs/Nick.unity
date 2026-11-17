@@ -395,7 +395,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430764989}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ded7dbeab05eb6840b85909231756507, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -619,7 +619,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212524849}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ded7dbeab05eb6840b85909231756507, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -731,7 +731,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558066303}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ded7dbeab05eb6840b85909231756507, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1366,6 +1366,10 @@ PrefabInstance:
     - target: {fileID: 3185196736045084249, guid: e1bd2f1c6c9192e478a926b0092cc2dd, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216626834650874059, guid: e1bd2f1c6c9192e478a926b0092cc2dd, type: 3}
+      propertyPath: RotateSpeed
+      value: 0.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
