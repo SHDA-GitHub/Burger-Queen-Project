@@ -1,63 +1,49 @@
-using System.Collections.Generic;
-using System.Linq;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+public interface IInteractable
+{
+    void Interact();
+}
 
 public class InteractScript : MonoBehaviour
 {
     [Header("Input Action")]
     private ThirdPersonMovement PlayerActions;
 
-    private readonly HashSet<GameObject> stationInRange =
-        new HashSet<GameObject>();
+    public Transform InteractorSource;
+    public float InteractRange = 3f;
 
-    private void Start()
+    private void Awake()
     {
-        if (PlayerActions != null)
-        {
-            PlayerActions.Player.Enable();
-            PlayerActions.Player.Interact.performed += OnInteract;
-        }
-    }
+        PlayerActions = new ThirdPersonMovement();
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("BakeStation"))
-        {
-            stationInRange.Add(other.gameObject);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        stationInRange.Remove(other.gameObject);
+        PlayerActions.Player.Enable();
+        PlayerActions.Player.Interact.performed += OnInteract;
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        GameObject closestBlock = null;
-        float closestDistance = float.MaxValue;
+        Ray r = new Ray(
+            InteractorSource.position,
+            InteractorSource.forward
+        );
 
-        foreach (GameObject block in stationInRange)
+        if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
         {
-            if (block == null)
-                continue;
-
-            float distance = (
-                block.transform.position - transform.position
-            ).sqrMagnitude;
-
-            if (distance < closestDistance)
+            if (hitInfo.collider.TryGetComponent(
+                out IInteractable interactObj))
             {
-                closestDistance = distance;
-                closestBlock = block;
+                interactObj.Interact();
             }
         }
+    }
 
-        if (closestBlock != null &&
-            closestBlock.CompareTag("BakeStation"))
-        {
-            Destroy(closestBlock);
-        }
+    private void OnDestroy()
+    {
+        PlayerActions.Player.Interact.performed -= OnInteract;
+        PlayerActions.Player.Disable();
+        PlayerActions.Dispose();
     }
 }
