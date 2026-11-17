@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 Movement;
 
 
+
     void Start()
     {
         PlayerActions = new ThirdPersonMovement();
@@ -30,13 +31,19 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector3(Movement.x * -MovementSpeed, rb.linearVelocity.y , Movement.z * -MovementSpeed);
+        Vector3 MoveDir = new Vector3(Movement.x * -MovementSpeed, rb.linearVelocity.y, Movement.z * -MovementSpeed);
+        if(Movement != Vector3.zero)
+        {
+            transform.forward = MoveDir;
+        }
 
-        Debug.Log(rb.linearVelocity);
+
+
     }
 
     public void OnMovement(InputAction.CallbackContext context)
     {
-        
+       
         Movement.x = context.ReadValue<Vector2>().x;
         Movement.z = context.ReadValue<Vector2>().y;
     }
