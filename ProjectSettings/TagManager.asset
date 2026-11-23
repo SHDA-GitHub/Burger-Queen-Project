@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - BakeStation
+  - CustomerSpot
   layers:
   - Default
   - TransparentFX
