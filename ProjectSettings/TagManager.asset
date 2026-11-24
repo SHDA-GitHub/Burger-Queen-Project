@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - BakeStation
+  - TrashCan
   layers:
   - Default
   - TransparentFX

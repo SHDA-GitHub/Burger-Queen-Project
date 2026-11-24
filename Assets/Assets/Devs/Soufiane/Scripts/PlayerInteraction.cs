@@ -10,6 +10,7 @@ public class PlayerInteraction : MonoBehaviour
     public List<IngredientData> receivedIngredientData = new List<IngredientData>();
 
     private BakeStation currentBakeStation;
+    private TrashCan currentTrashCan;
 
     private void Start()
     {
@@ -32,7 +33,11 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (currentBakeStation != null)
         {
-            Interact();
+            InteractWithBakeStation();
+        }
+        else if (currentTrashCan != null)
+        {
+            InteractWithTrashCan();
         }
     }
 
@@ -42,28 +47,55 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentBakeStation = other.GetComponent<BakeStation>();
         }
+
+        if (other.CompareTag("TrashCan"))
+        {
+            currentTrashCan = other.GetComponent<TrashCan>();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("BakeStation"))
         {
-            if (currentBakeStation != null)
-            {
-                currentBakeStation = null;
-            }
+            currentBakeStation = null;
+        }
+
+        if (other.CompareTag("TrashCan"))
+        {
+            currentTrashCan = null;
         }
     }
 
-    private void Interact()
+    private void InteractWithBakeStation()
     {
         if (currentBakeStation == null)
             return;
 
-        receivedIngredientData = new List<IngredientData>(
-            currentBakeStation.GetIngredientData()
-        );
+        IngredientData receivedIngredient = currentBakeStation.GetNextIngredient();
 
-        Debug.Log("Received " + receivedIngredientData.Count + " Ingredient Data assets!");
+        if (receivedIngredient == null)
+        {
+            Debug.Log("Bake Station has no ingredients!");
+            return;
+        }
+
+        receivedIngredientData.Clear();
+        receivedIngredientData.Add(receivedIngredient);
+
+        Debug.Log("Received ingredient: " + receivedIngredient.name);
+    }
+
+    private void InteractWithTrashCan()
+    {
+        if (receivedIngredientData.Count == 0)
+        {
+            Debug.Log("You have no ingredients to throw away!");
+            return;
+        }
+
+        receivedIngredientData.Clear();
+
+        Debug.Log("All ingredients thrown away!");
     }
 }
