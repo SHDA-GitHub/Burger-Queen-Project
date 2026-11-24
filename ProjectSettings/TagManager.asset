@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BakeStation
   - TrashCan
+  - CustomerSpot
   layers:
   - Default
   - TransparentFX
