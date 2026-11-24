@@ -246,63 +246,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1001 &449468269
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.9619622
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00000045944103
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.7431799
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
-      propertyPath: m_Name
-      value: Fish game bak station
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 98cf858e9bceaff41a47a92b7bd6d3b3, type: 3}
 --- !u!1 &1874373756
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,10 +338,125 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &374739855599939456
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.2559104
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.8588934
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443459637770256273, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252893037855810859, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+      propertyPath: m_Name
+      value: FrituurBak_Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f53b0293d8de2c4d8a9343e6756eabf, type: 3}
+--- !u!1001 &4632151942323742788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9021053
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000003459803
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.2355204
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142086408231001394, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 770989070228998024, guid: 8761da884bacaf04dad4c09584556590, type: 3}
+      propertyPath: m_Name
+      value: BakeStation_Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8761da884bacaf04dad4c09584556590, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1874373759}
   - {fileID: 297580776}
-  - {fileID: 449468269}
+  - {fileID: 4632151942323742788}
+  - {fileID: 374739855599939456}
