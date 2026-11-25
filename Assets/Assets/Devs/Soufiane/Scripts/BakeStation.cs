@@ -6,8 +6,22 @@ public class BakeStation : MonoBehaviour
     [Header("Available Ingredient Data")]
     public List<IngredientData> ingredientData = new List<IngredientData>();
 
-    public List<IngredientData> GetIngredientData()
+    private int currentIngredientIndex = 0;
+
+    public IngredientData GetNextIngredient()
     {
-        return ingredientData;
+        if (ingredientData == null || ingredientData.Count == 0)
+            return null;
+
+        IngredientData selectedIngredient = ingredientData[currentIngredientIndex];
+
+        currentIngredientIndex++;
+
+        if (currentIngredientIndex >= ingredientData.Count)
+        {
+            currentIngredientIndex = 0;
+        }
+
+        return selectedIngredient;
     }
 }

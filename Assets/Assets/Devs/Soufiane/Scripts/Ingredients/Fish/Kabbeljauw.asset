@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c94136c75795474aacf087599792373, type: 3}
-  m_Name: Volkoren Brood
+  m_Name: Kabbeljauw
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  breads: 01000000i
-  fish: 
+  breads: 
+  fish: 09000000i
   sauces: 
   drinks: 

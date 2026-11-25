@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public enum Bread
 {
     Wit,
-    Volkoren,
-    Bruin
+    Bruin,
+    GlutenVrij,
 }
 
 public enum Fish
@@ -14,7 +14,13 @@ public enum Fish
     Kibbeling,
     Zalm,
     Paling,
-    Makreel
+    Makreel,
+    Inktvisringen,
+    Mosselen,
+    Garnalen,
+    Witvis,
+    Kabbeljauw,
+    Schol,
 }
 
 public enum Sauce
@@ -28,6 +34,7 @@ public enum Drinks
 {
     Cola,
     Fanta,
+    Sprite,
     IceTea,
     Cassis,
     SpaRood
