@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,10 +8,16 @@ public class Customer : MonoBehaviour
     [SerializeField] Transform AgentDestination;
     private bool CustomerHasSpot;
 
+    [SerializeField]List<string> Foods;
+    [SerializeField] List<string> Drinks;
+    public string Chosenfood;
+    public string ChosenDrink;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         CustomerHasSpot = false;
+        ChooseItems();
+        
     }
 
     
@@ -40,10 +47,19 @@ public class Customer : MonoBehaviour
                 CustomerHasSpot = true;
             }
             else return;
+        }
+    }
+    private void ChooseItems()
+    {
+        int FoodChoise = Random.Range(0,Foods.Count);
+        int DrinkChoise = Random.Range(0, Drinks.Count);
+        Chosenfood = Foods[FoodChoise];
+        ChosenDrink = Drinks[DrinkChoise];
+        
+    }
+        
             
                 
             
-        }
-        
-    }
 }
+
